@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Kablammo&display=swap');
+@import './alignments.css';
+@import './custom-components.css';
+@import './form-elements.css';
+@import './layout.css';
+@import './text-elements.css';
+@import './theme.css';
+
+
+
+*{
+    font-family: 'Comfortaa', cursive !important; 
+}
+
+body{
+    background-color: var(--primary);
+    margin: 0;
+}

@@ -1,0 +1,80 @@
+.register-container *{
+    color: var(--form-color);
+}
+
+.register-container *::placeholder{
+    color: var(--form-color);
+}
+
+.register-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(215, 181, 118);
+    padding: 20px;
+    align-items: start;
+    height: unset;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#registration-form{
+    background-color: inherit;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#register-form-header{
+    align-items: flex-start;
+}
+
+textarea{
+    background-color: #5d8c88;;
+    border: none;
+    border-radius: 15px;
+}
+
+select{
+    background-color: #5d8c88;
+    color: var(--form-color);
+    border: none;
+    height: 2.9rem;
+    border-radius: 15px;
+}
+
+option{
+    background-color: rgb(162, 159, 153);
+    color: var(--form-color);
+    border: none;
+    height: 2.9rem !important;
+    border-bottom: 1px solid grey;
+}
+
+.already-member{
+    color: rgb(47, 6, 6);
+    padding: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+select:hover, textarea:hover{
+    transform: scale(1.1);
+    background-color: gray;
+}
+
+#registration-form > Row{
+    display: flex;
+}
+.primary-contained-btn {
+    color: white;
+}
+
+@media screen and (max-width: 550px) {
+    .register-container{
+        width: 90%;
+    }
+}

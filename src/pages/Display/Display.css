@@ -1,0 +1,256 @@
+#to-login-btn{
+    background-color: var(--form-bgcolor);
+    /*margin: 20px;
+    */text-align: center;
+    /*border: 5px solid red;
+    */text-align: center;
+    width: 120px;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+    border-radius: 30px;
+    transition: transform 300ms ease-in-out;
+    -webkit-transition: transform 300ms ease-in-out;
+    -moz-transition: transform 300ms ease-in-out;
+    -ms-transition: transform 300ms ease-in-out;
+    -o-transition: transform 300ms ease-in-out;
+}
+
+#to-login-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#to-register-btn{
+    background-color: rgb(215, 181, 118);
+}
+
+.nav-header-display{
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--form-bgcolor);
+}
+
+.nav-display{
+    margin: 10px 5px;
+    height: 70px;
+}
+
+.dealings-bg{
+    background: url(./../../assets/dealings2.avif);
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: visible 1s ease-out;
+}
+
+.dealings-bg span{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+}
+
+.text-sec{
+    width: 90%;
+    margin: 50px auto;
+    font-size: 1.2rem;
+    text-align: center;
+    animation: slide-in-from-top 700ms ease-out;
+}
+
+.text-sec span{
+    color: white;
+    font-size: 18px
+}
+
+.signup-btn{
+    display: block;
+    margin: 10px auto;
+    background-color: var(--form-bgcolor);
+    font-size: 24px;
+    padding: 5px;
+    box-shadow: none !important;
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+    height: 70px;
+    transition: transform 300ms ease-in-out;
+    animation: slide-in-from-bottom 700ms ease-out;
+
+}
+
+.signup-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(134, 110, 64);
+}
+
+.display-page{
+    animation: visible 1s linear;
+}
+
+.features{
+    margin: 40px auto;
+    animation: visible 1s ease-in 1s;
+    height: 100%;
+    animation: show 1s linear;
+    -webkit-animation: visible 1s ease-in 1s;
+}
+
+.feature{
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 70%;
+    height: 300px;
+    max-width: 550px;
+    /*background-color: rgb(88, 66, 255);
+    */background-color:var(--form-bgcolor);
+    transition: transform 300ms ease-in;
+    animation: slide-in-from-bottom 700ms ease-in;
+    -webkit-animation: slide-in-from-bottom 700ms ease-in;
+    -webkit-transition: transform 300ms ease-in;
+    -moz-transition: transform 300ms ease-in;
+    -ms-transition: transform 300ms ease-in;
+    -o-transition: transform 300ms ease-in;
+}
+.feature:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(134, 110, 64);
+}
+
+.feature-img{
+    font-size: 15rem;
+    font-weight: 300;
+}
+
+.feature-text{
+    font-size: 1.2rem;
+}
+
+.display-footer a{
+    padding-right: 10px;
+}
+
+.display-footer{
+    background-color:var(--form-bgcolor);
+    height: 100%;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-break: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.coins{
+    overflow: hidden;
+    margin: 5px;
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+    /* background-color: wheat; */
+}
+
+.coins p{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socials{
+    padding: 10px;
+    padding-left: 0;
+}
+
+
+@keyframes visible {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes show {
+    from{
+        display: none !important;
+    }
+    to{
+        display: inline !important;
+    }
+}
+
+
+@keyframes slide-in-from-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+@keyframes slide-in-from-top {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-from-bottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+@keyframes slide-in-from-left {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes changeBgColor {
+    from {
+        background-color: var(--form-bgcolor);
+    }    
+    to {
+        background-color: transparent;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .features{
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .feature{
+        width: 30%;
+    }
+
+    .coins img
+    {
+        width: 40%;
+    }
+  }

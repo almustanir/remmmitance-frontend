@@ -1,0 +1,113 @@
+/* Base styles */
+.home-component {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 96%;
+}
+
+
+.home-com {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary);
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+}
+
+.home-com img {
+    height: 50px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.general-btns-home {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.general-btn, .buttons-home-functional   {
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.general-btn button, .buttons-home-functional button {
+    /*font-size: 20px;
+    */cursor: pointer;
+    padding: 5px;
+    width: 90px;
+    background-color: white;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.buttons-home-functional {
+    margin-top: -10px;
+}
+
+.buttons-home-functional button {
+    background-color: rgb(33, 158, 188);
+    color: white;
+
+}
+
+.general-btn button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+
+/* Media queries */
+@media screen and (max-width: 900px) {
+    .text-sm {
+        font-size: 10px;
+    }
+
+    .transaction-header,
+    .request-header {
+        flex-direction: column !important;
+    }
+
+    .body {
+        /* width: 100vw; */
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* ---------------- added new on 31/08/2023 --------------------- */
+/* -------------------------------------------------------------- */
+
+@media screen and (min-width: 700px) {
+    .general-btn button, .buttons-home-functional button {
+        width: 200px;
+        height: 80px;
+    }
+
+    .general-btns-home {
+        margin-top: 40px;
+        gap: 50px;
+    }
+}
