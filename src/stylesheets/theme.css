@@ -1,13 +1,13 @@
 :root {
-    /* --primary: rgb(135, 134, 226); */
-    --primary: #023047;
-    --form-bgcolor: #e7b309;
-    /* --form-color: #123431; */
-    --form-field-bgcolor:#023047 ;
-    --secondary: #e7b309;
-    --tertiary : #410303e4;
-    
-  }
+  /* --primary: rgb(135, 134, 226); */
+  --primary: #023047;
+  --form-bgcolor: #48cae4;
+  /* --form-color: #123431; */
+  --form-field-bgcolor:#164c7e ;
+  --secondary: #48cae4;
+  --tertiary : #410303e4;
+  
+}
   
   
   .bg-primary {

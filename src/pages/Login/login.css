@@ -54,7 +54,7 @@ form{
 }
 
 #line{
-    border: 1px solid #5d8c88;
+    border: 1px solid black;
     margin: 2rem 0 3rem;
     width: 100%;
 }
@@ -87,7 +87,8 @@ input:active{
 
 
 #submit-btn{
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    background:  -webkit-linear-gradient(black, var(--form-field-bgcolor));
     color: var(white);
     border: none;
     border-radius: 30px;

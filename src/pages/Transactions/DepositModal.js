@@ -42,6 +42,7 @@ function DepositModal({ showDepositModal, setShowDepositModal, reloadData }) {
       footer={null}
     >
       <div className="flex-col gap-1">
+      <small style={{color:"red"}}>you will be charge $0.35</small>
         <Form layout="vertical" form={form}>
           <Form.Item
             label="Amount"

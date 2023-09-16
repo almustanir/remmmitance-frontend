@@ -69,13 +69,13 @@
 }
 
 .buttons-home-functional button {
-    background-color: rgb(33, 158, 188);
+    background-color:var(--secondary);;
     color: white;
 
 }
 
 .general-btn button:hover {
-    background-color: var(--secondary);
+    background-color:#219ebc;
     transform: translateY(-3px);
 }
 

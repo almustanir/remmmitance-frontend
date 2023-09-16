@@ -11,9 +11,9 @@ export default function () {
         <section className="nav-header-display">
           <i
             className="ri-wallet-3-fill"
-            style={{ fontSize: "rem", paddingRight: "20px" }}
+            style={{ fontSize: "2.5rem", paddingRight: "20px" }}
           ></i>
-          <span>MUBSWALLET</span>
+          <span className="mub">MUBSWALLET</span>
         </section>
         <section className="btns-container justify-end">
           <button
@@ -30,21 +30,21 @@ export default function () {
       <section
         className="download flex justify-center items-center"
         style={{
-          backgroundColor: "black",
-          color: "white !important",
+          backgroundColor: "",
           margin: "30px auto 0 auto",
           gap: "20px",
           padding: "20px",
+          color: "black"
         }}
       >
         <p>
           <i
-            style={{ color: "white", fontSize: "1.5rem" }}
-            className="ri-google-play-line"
+            style={{ color: "black", fontSize: "1.5rem" }}
+            className=""
           ></i>
         </p>
-        <p style={{ color: "white" }}>
-          Download the App from Google Play Store{" "}
+        <p className="mubs">
+          BANK WITH MUBSWALLET TODAY FROM ANYWHERE AROUND THE WORLD  {" "}
         </p>
       </section>
       <section className="dealings-bg">

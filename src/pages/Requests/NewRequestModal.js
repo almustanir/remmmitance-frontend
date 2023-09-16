@@ -114,6 +114,8 @@ function NewRequestModal({
           <Form.Item label="Description" name="description">
             <textarea type="text" />
           </Form.Item>
+          <small style={{color:"red", textAlign:"center", padding:"10px"}}>you will be charge $0.35</small>
+
 
           <div className="flex justify-end gap-1">
             <button className="primary-outlined-btn">Cancel</button>

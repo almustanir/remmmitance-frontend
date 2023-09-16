@@ -1,5 +1,6 @@
 #to-login-btn{
-    background-color: var(--form-bgcolor);
+    /* background-color: var(--form-bgcolor); */
+    background: -webkit-linear-gradient(white, var(--form-field-bgcolor));
     /*margin: 20px;
     */text-align: center;
     /*border: 5px solid red;
@@ -21,7 +22,33 @@
 }
 
 #to-register-btn{
-    background-color: rgb(215, 181, 118);
+    background-color:var(--form-field-bgcolor);
+}
+
+.mubs {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: white;
+        background: -webkit-linear-gradient(white, var(--form-field-bgcolor));
+        animation: animate_mubs 30s linear infinite;
+        -webkit-animation: animate_mubs 30s linear infinite;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+@keyframes animate_mubs {
+    from {
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+}
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
 }
 
 .nav-header-display{
@@ -62,6 +89,10 @@
     text-align: center;
     animation: slide-in-from-top 700ms ease-out;
 }
+.mub{
+    background:  -webkit-linear-gradient(white, var(--form-field-bgcolor));
+    color: white;
+}
 
 .text-sec span{
     color: white;
@@ -71,7 +102,7 @@
 .signup-btn{
     display: block;
     margin: 10px auto;
-    background-color: var(--form-bgcolor);
+    background-color: var(--form-field-bgcolor);
     font-size: 24px;
     padding: 5px;
     box-shadow: none !important;
@@ -87,7 +118,7 @@
 .signup-btn:hover{
     cursor: pointer;
     transform: scale(1.1);
-    background-color: rgb(134, 110, 64);
+    background-color: var(--form-field-bgcolor);
 }
 
 .display-page{
@@ -107,9 +138,9 @@
     margin: 20px 0;
     width: 70%;
     height: 300px;
+    color: whitesmoke;
     max-width: 550px;
-    /*background-color: rgb(88, 66, 255);
-    */background-color:var(--form-bgcolor);
+    background-color:var(--form-field-bgcolor);
     transition: transform 300ms ease-in;
     animation: slide-in-from-bottom 700ms ease-in;
     -webkit-animation: slide-in-from-bottom 700ms ease-in;
@@ -121,7 +152,7 @@
 .feature:hover{
     cursor: pointer;
     transform: scale(1.1);
-    background-color: rgb(134, 110, 64);
+    background-color:var(--form-field-bgcolor);
 }
 
 .feature-img{
@@ -138,8 +169,9 @@
 }
 
 .display-footer{
-    background-color:var(--form-bgcolor);
+    background-color:var(--form-field-bgcolor);
     height: 100%;
+    color: white;
     padding: 25px;
     text-align: center;
     font-size: 1.2rem;
