@@ -91,7 +91,7 @@
 }
 .mub{
     background:  -webkit-linear-gradient(white, var(--form-field-bgcolor));
-    color: white;
+    color: black;
 }
 
 .text-sec span{
