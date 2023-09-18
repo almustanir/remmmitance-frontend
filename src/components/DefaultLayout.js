@@ -91,7 +91,7 @@ function DefaultLayout({ children }) {
         <div className="menu">
           {(menuToRender.map((item) => {
             const isActive = window.location.pathname === item.path;
-            return ( item.title != "Logout") ? <div
+            return ( item.title !== "Logout") ? <div
                 key={item.title}
                 className={`menu-item ${isActive ? "active-menu-item" : ""}`}
                 onClick={item.onClick}
