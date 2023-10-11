@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Modal, Form, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { TransferFunds, VerifyAccount } from "../../apicalls/transactions";
@@ -14,6 +14,7 @@ function NewRequestModal({
 
   const [isVerified, setIsVerified] = React.useState("");
   const [form] = Form.useForm();
+  const [verifiedUser,setVerifiedUser] = useState({})
   const dispatch = useDispatch();
   const verifyAccount = async () => {
     try {
@@ -24,6 +25,7 @@ function NewRequestModal({
       dispatch(HideLoading());
       if (response.success) {
         setIsVerified("true");
+        setVerifiedUser(response.data)
       } else {
         setIsVerified("false");
       }
@@ -87,7 +89,11 @@ function NewRequestModal({
           </div>
 
           {isVerified === "true" && (
+            <div>
+            <div className="success-bg">Name: {verifiedUser.firstName+ " "+verifiedUser.lastName}</div>
+            <div className="success-bg">Country: {verifiedUser.country}</div>
             <div className="success-bg">Account verified successfully</div>
+            </div>
           )}
 
           {isVerified === "false" && (

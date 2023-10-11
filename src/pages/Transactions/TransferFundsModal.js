@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Modal, Form, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { TransferFunds, VerifyAccount } from "../../apicalls/transactions";
@@ -14,6 +14,8 @@ function TranserFundsModal({
   console.log(user.balance);
   const [isVerified, setIsVerified] = React.useState("");
   const [form] = Form.useForm();
+  const [verifiedUser, setVerifiedUser] = useState({});
+
   const dispatch = useDispatch();
   const verifyAccount = async () => {
     try {
@@ -24,6 +26,7 @@ function TranserFundsModal({
       dispatch(HideLoading());
       if (response.success) {
         setIsVerified("true");
+        setVerifiedUser(response.data);
       } else {
         setIsVerified("false");
       }
@@ -40,15 +43,15 @@ function TranserFundsModal({
         ...values,
         sender: user.id,
         status: "success",
-        reference : values.reference || "no reference",
+        reference: values.reference || "no reference",
       };
       const response = await TransferFunds(payload);
       if (response.success) {
         reloadData();
         setShowTransferFundsModal(false);
         message.success(response.message);
-        dispatch(ReloadUser(true))
-      }else{
+        dispatch(ReloadUser(true));
+      } else {
         message.error(response.message);
       }
       dispatch(HideLoading());
@@ -82,7 +85,13 @@ function TranserFundsModal({
           </div>
 
           {isVerified === "true" && (
-            <div className="success-bg">Account verified successfully</div>
+            <div>
+              <div className="success-bg">
+                Username: {verifiedUser.firstName + " " + verifiedUser.lastName}
+              </div>
+              <div className="success-bg">Country: {verifiedUser.country}</div>
+              <div className="success-bg">Account verified successfully</div>
+            </div>
           )}
 
           {isVerified === "false" && (
@@ -109,8 +118,9 @@ function TranserFundsModal({
           <Form.Item label="Reference" name="reference">
             <textarea type="text" />
           </Form.Item>
-          <small style={{color:"red", textAlign:"center", padding:"10px"}}>you will be charge $0.35</small>
-
+          <small style={{ color: "red", textAlign: "center", padding: "10px" }}>
+            you will be charge $0.35
+          </small>
 
           <div className="flex justify-end gap-1">
             <button className="primary-outlined-btn">Cancel</button>
@@ -127,4 +137,3 @@ function TranserFundsModal({
 }
 
 export default TranserFundsModal;
-

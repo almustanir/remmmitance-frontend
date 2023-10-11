@@ -46,6 +46,7 @@
     gap: 5px;
     justify-content: space-around;
     width: 100%;
+    
 }
 
 
@@ -65,12 +66,12 @@
 }
 
 .buttons-home-functional {
-    margin-top: -10px;
+    margin-top: 100px;
 }
 
 .buttons-home-functional button {
     background-color:var(--secondary);;
-    color: white;
+    color: black;
 
 }
 
@@ -79,7 +80,18 @@
     transform: translateY(-3px);
 }
 
+.box-1{
+    height: 200px;
+    width: 35%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
 /* Media queries */
 @media screen and (max-width: 900px) {
     .text-sm {
@@ -109,5 +121,17 @@
     .general-btns-home {
         margin-top: 40px;
         gap: 50px;
+    }
+    /* added today when i want to make my video */
+    /* body{
+        width: 75%;
+    } */
+    /* the end here */
+}
+
+@media screen and (max-width: 700px) {
+    .box-container{
+        /* flex-wrap: wrap; */
+        flex-direction: column;
     }
 }

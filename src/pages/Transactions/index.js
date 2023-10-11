@@ -87,7 +87,9 @@ function Transactions() {
   };
 
   useEffect(() => {
-    const func = async () => {await getData();}
+    const func = async () => {
+      await getData();
+    };
     func();
   }, []);
 
@@ -97,25 +99,13 @@ function Transactions() {
     <div>
       <div className="flex m-2 justify-around items-center transaction-header">
         <PageTitle title="Transactions" />
-
-        {/* <div className="flex transcation-head-buttons gap-1">
-          <button
-            className="primary-outlined-btn"
-            onClick={() => setShowDepositModal(true)}
-          >
-            Deposit{" "}
-          </button>
-          <button
-            className="primary-outlined-btn"
-            onClick={() => setShowTransferFundsModal(true)}
-          >
-            Transer{" "}
-          </button>
-        </div> */}
       </div>
 
-      {(viewport_width > 850) ? <Table columns={columns} dataSource={data} className="mt-2" />:<Modals dataSource={data} items={columns}></Modals>}
-
+      {viewport_width > 850 ? (
+        <Table columns={columns} dataSource={data} className="mt-2" />
+      ) : (
+        <Modals dataSource={data} items={columns}></Modals>
+      )}
 
       {showTransferFundsModal && (
         <TranserFundsModal

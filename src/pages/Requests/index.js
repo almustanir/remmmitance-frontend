@@ -27,7 +27,7 @@ function Requests() {
     try {
       dispatch(ShowLoading());
       const response = await GetAllRequestsByUser();
-
+      console.log("response",response)
       if (response.success) {
         const sendData = response.data.filter(
           (item) => item.sender._id === user.id
@@ -52,7 +52,9 @@ function Requests() {
 
   const updateStatus = async (record, status) => {
     try {
-      if (status === "accepted" && record.amount > user.balance) {
+      // console.log(record.amount,"user balance",user.balance)
+      if (status === "accepted" && record.amount > user.convertedAmount) {
+        
         message.error("Insufficient funds");
         return;
       } else {
@@ -97,7 +99,10 @@ function Requests() {
     },
     {
       title: "Amount",
-      dataIndex: "amount",
+      dataIndex: "convertedAmount",
+      render(convertedAmount,record){
+        return convertedAmount+record.currency
+      }
     },
     {
       title: "Date",
@@ -146,12 +151,6 @@ function Requests() {
     <div>
       <div className="flex m-2 justify-around items-center request-header">
         <PageTitle title="Requests" />
-        {/* <button
-          className="primary-outlined-btn"
-          onClick={() => setShowNewRequestModal(true)}
-        >
-          Request Funds
-        </button> */}
       </div>
        <Tabs defaultActiveKey="1">
          <TabPane tab="Sent" key="1">

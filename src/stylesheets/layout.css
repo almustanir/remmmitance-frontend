@@ -12,7 +12,7 @@
     position: sticky;
     top: 0;
     padding: 15px;
-    height: 94vh;
+    height: 100vh;
     display: flex;
     align-items: space-around;
   }
@@ -34,6 +34,7 @@
     background-color: var(--primary); 
     color: var(--secondary) !important;
     border-radius: 20px;
+    min-width: 120px;
   }
   .menu-item h1 {
     color: white !important;

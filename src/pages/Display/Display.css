@@ -1,6 +1,7 @@
 #to-login-btn{
     /* background-color: var(--form-bgcolor); */
-    background: -webkit-linear-gradient(white, var(--form-field-bgcolor));
+    /* background: -webkit-linear-gradient(white, var(--form-field-bgcolor)); */
+    background-color: #219ebc;
     /*margin: 20px;
     */text-align: center;
     /*border: 5px solid red;
@@ -90,7 +91,8 @@
     animation: slide-in-from-top 700ms ease-out;
 }
 .mub{
-    background:  -webkit-linear-gradient(white, var(--form-field-bgcolor));
+    /* background:  -webkit-linear-gradient(white, var(--form-field-bgcolor)); */
+    background-color: #219ebc;
     color: black;
 }
 
@@ -102,7 +104,8 @@
 .signup-btn{
     display: block;
     margin: 10px auto;
-    background-color: var(--form-field-bgcolor);
+    /* background-color: var(--form-field-bgcolor); */
+    background-color: #219ebc;
     font-size: 24px;
     padding: 5px;
     box-shadow: none !important;
@@ -140,7 +143,7 @@
     height: 300px;
     color: whitesmoke;
     max-width: 550px;
-    background-color:var(--form-field-bgcolor);
+    background-color:#219ebc;
     transition: transform 300ms ease-in;
     animation: slide-in-from-bottom 700ms ease-in;
     -webkit-animation: slide-in-from-bottom 700ms ease-in;
@@ -152,7 +155,7 @@
 .feature:hover{
     cursor: pointer;
     transform: scale(1.1);
-    background-color:var(--form-field-bgcolor);
+    background-color:#219ebc;
 }
 
 .feature-img{
@@ -169,7 +172,7 @@
 }
 
 .display-footer{
-    background-color:var(--form-field-bgcolor);
+    background-color:#219ebc;
     height: 100%;
     color: white;
     padding: 25px;
